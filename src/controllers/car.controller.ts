@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { CarServices } from './../services/car.services';
+import { CarServices } from '../services/car.service';
 
 export class CarController {
     private carService = new CarServices();
