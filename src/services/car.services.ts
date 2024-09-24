@@ -15,7 +15,7 @@ export class CarServices {
         if (uniqueCar) {
             return carSchema.parse(uniqueCar);
         } else {
-            throw new AppError(404, `Could not find any car with the id ${carId}.`);
+            throw new AppError(404, `Could not find a car with the id ${carId}.`);
         }
     };
 
@@ -39,7 +39,7 @@ export class CarServices {
     delete = async (carId: string): Promise<string> => {
         try {
             await prisma.car.delete({ where: { id: carId } });
-            return "Car was deleted successfully";
+            return "Car was deleted successfully.";
         } catch (error) {
             throw new AppError(404, `Could not find any car with the id ${carId}.`);
         }
