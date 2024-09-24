@@ -7,12 +7,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Car {
+model car {
   id String @id @default(uuid())
   name String
   description String?
   brand String
   year Int
   km Int
-  color String
+  color String?
 }

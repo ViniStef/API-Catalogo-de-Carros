@@ -6,4 +6,4 @@ export const app = express();
 
 app.use(json());
 
-app.use("/cars")
+app.use("/cars");
