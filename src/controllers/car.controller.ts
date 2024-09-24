@@ -12,6 +12,7 @@ export class carController {
 
     getOne = async (req: Request, res: Response): Promise<Response> => {
         const car = await this.carService.getOne(req.params.id);
+        
         return res.status(200).json(car);
     }
 
