@@ -16,7 +16,7 @@ export const invalidCarKey = {
   invalidKeyColor: "green"
 };
 
-export const validGetMultipleCars = [
+export const validMultipleCars = [
   {
     name: "Valid Car 1",
     description: "This car has a valid description! Car 1",

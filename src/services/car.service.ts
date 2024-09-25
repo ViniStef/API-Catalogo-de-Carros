@@ -32,7 +32,7 @@ export class CarServices {
             });
             return carSchema.parse(updatedCar);
         } catch (error) {
-            throw new AppError(404, "Car not found.");
+            throw new AppError(404, "Error while trying to update.");
         }
     };
 

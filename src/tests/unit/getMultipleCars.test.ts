@@ -1,6 +1,6 @@
 import { prisma } from "../../database/prisma"; 
 import { CarServices } from "../../services/car.service";
-import { validGetMultipleCars } from "../mocks/services.mock"; 
+import { validMultipleCars } from "../mocks/services.mock"; 
 
 describe("Unit Test: Get Multiple Cars", () => {
   const services = new CarServices();
@@ -9,8 +9,8 @@ describe("Unit Test: Get Multiple Cars", () => {
     await prisma.$transaction([prisma.car.deleteMany()]);
   });
 
-  test("Should successfully retrieve multiple cars", async () => {
-    await prisma.car.createMany({ data: validGetMultipleCars });
+  test("Should successfully get multiple cars", async () => {
+    await prisma.car.createMany({ data: validMultipleCars });
 
     const receivedValue = await services.getMultiple();
 

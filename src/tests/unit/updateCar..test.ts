@@ -43,7 +43,7 @@ describe("Unit Tests: Update Car", () => {
 
     await expect(
       services.update(nonExistingId, updatedCarData)
-    ).rejects.toThrow("Car not found.");
+    ).rejects.toThrow("Error while trying to update.");
   });
 
 });
